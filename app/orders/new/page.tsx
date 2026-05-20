@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import { AppShell } from '@/components/AppShell';
+import { Card } from '@/components/Card';
+
+export default function NewOrderPage(){return <AppShell><div className="space-y-6"><Link href="/orders" className="font-bold text-mocha">← 返回訂單列表</Link><div><p className="text-sm font-bold text-mocha">New Order</p><h2 className="text-3xl font-black text-cocoa">新增訂單</h2></div><Card><div className="grid gap-4 md:grid-cols-2"><input className="rounded-2xl border border-warmgray bg-cream px-4 py-3" placeholder="客戶姓名"/><input className="rounded-2xl border border-warmgray bg-cream px-4 py-3" placeholder="電話"/><input className="rounded-2xl border border-warmgray bg-cream px-4 py-3 md:col-span-2" placeholder="地址"/><select className="rounded-2xl border border-warmgray bg-cream px-4 py-3"><option>選擇商品</option><option>奶油色針織外套</option><option>韓系童裝套裝</option></select><input className="rounded-2xl border border-warmgray bg-cream px-4 py-3" placeholder="數量"/><button className="rounded-2xl bg-mocha px-5 py-3 font-bold text-white md:col-span-2">建立訂單</button></div></Card></div></AppShell>}
