@@ -1,0 +1,4 @@
+import { AppShell } from '@/components/AppShell';
+import { Card } from '@/components/Card';
+
+export default function SettingsPage(){return <AppShell><div className="space-y-6"><div><p className="text-sm font-bold text-mocha">Settings</p><h2 className="text-3xl font-black text-cocoa">系統設定</h2></div><div className="grid gap-4 md:grid-cols-2"><Card><h3 className="text-xl font-black text-cocoa">店家資料</h3><div className="mt-5 space-y-3"><input className="w-full rounded-2xl border border-warmgray bg-cream px-4 py-3" placeholder="店家名稱" defaultValue="Komori Biyori"/><input className="w-full rounded-2xl border border-warmgray bg-cream px-4 py-3" placeholder="聯絡信箱" defaultValue="abby910527@gmail.com"/></div></Card><Card><h3 className="text-xl font-black text-cocoa">子帳號權限</h3><p className="mt-3 leading-7 text-cocoa/70">之後可串接 Supabase roles，支援 Owner、Admin、Staff、Warehouse、Finance。</p></Card></div></div></AppShell>}

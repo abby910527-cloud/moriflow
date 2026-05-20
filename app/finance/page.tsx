@@ -1,0 +1,4 @@
+import { AppShell } from '@/components/AppShell';
+import { Card } from '@/components/Card';
+
+export default function FinancePage(){return <AppShell><div className="space-y-6"><div><p className="text-sm font-bold text-mocha">Finance</p><h2 className="text-3xl font-black text-cocoa">財務管理</h2></div><div className="grid gap-4 md:grid-cols-3"><Card><p className="text-sm text-cocoa/60">本月收入</p><h3 className="mt-2 text-3xl font-black text-cocoa">NT$ 386,200</h3></Card><Card><p className="text-sm text-cocoa/60">本月支出</p><h3 className="mt-2 text-3xl font-black text-cocoa">NT$ 146,900</h3></Card><Card><p className="text-sm text-cocoa/60">預估利潤</p><h3 className="mt-2 text-3xl font-black text-cocoa">NT$ 239,300</h3></Card></div><Card><h3 className="mb-4 text-xl font-black text-cocoa">付款人員統計</h3>{['Abby','小幫手 A','小幫手 B'].map((x,i)=><div key={x} className="mb-3 rounded-2xl bg-cream p-4 font-bold text-cocoa">{x}｜已支付 NT$ {(i+1)*12400}</div>)}</Card></div></AppShell>}
