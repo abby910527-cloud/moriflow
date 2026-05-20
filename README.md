@@ -1,30 +1,14 @@
-# MoriFlow SaaS Starter
+# MoriFlow Clickable SaaS Starter
 
-奶油系電商管理 SaaS Starter，適合部署到 Vercel。
+此版本已將主要按鈕改成可點擊互動：
 
-## 使用方式
+- 首頁按鈕可進入 Dashboard / 價格區塊
+- Dashboard 卡片可進入訂單、商品、財務頁
+- 側邊欄與手機底部選單可切換頁面
+- 新增訂單、建立商品、新增支出、儲存設定、子帳號新增都有示範互動提示
+- 訂單詳細頁可建立出貨、列印出貨單
+- 商品詳細頁的編輯商品、新增規格可點擊
 
-```bash
-npm install
-npm run dev
-```
+## 部署
 
-打開 http://localhost:3000
-
-## 頁面
-
-- `/` 官網首頁
-- `/login` 登入頁
-- `/dashboard` 後台總覽
-- `/orders` 訂單管理
-- `/products` 商品管理
-- `/finance` 財務管理
-- `/settings` 系統設定
-
-## 部署到 Vercel
-
-1. 將整個專案上傳到 GitHub repository。
-2. 到 Vercel 新增專案。
-3. 選擇 GitHub 的 `moriflow` repository。
-4. Framework 選 Next.js。
-5. 按 Deploy。
+把此資料夾內所有檔案上傳到 GitHub repo 根目錄，Vercel 會自動重新部署。

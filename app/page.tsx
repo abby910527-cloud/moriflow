@@ -29,9 +29,9 @@ export default function HomePage() {
           <Card className="relative space-y-5">
             <div className="flex items-center justify-between"><div><p className="text-sm text-cocoa/60">今日營收</p><h3 className="text-4xl font-black text-cocoa">NT$ 28,460</h3></div><div className="rounded-2xl bg-sage/20 px-3 py-2 text-sm font-bold text-cocoa">+18%</div></div>
             <div className="grid grid-cols-2 gap-4">
-              {['待出貨 16', '今日訂單 42', '低庫存 3', '已付款 31'].map((x) => <div key={x} className="rounded-3xl bg-cream p-5 font-bold text-cocoa">{x}</div>)}
+              {[['待出貨 16','/orders'], ['今日訂單 42','/orders'], ['低庫存 3','/products'], ['已付款 31','/finance']].map(([x, href]) => <Link href={href} key={x} className="rounded-3xl bg-cream p-5 font-bold text-cocoa transition hover:bg-oat/30">{x}</Link>)}
             </div>
-            <div className="rounded-3xl bg-cocoa p-5 text-white"><p className="text-sm opacity-70">熱銷商品</p><p className="text-xl font-bold">奶油針織外套</p></div>
+            <Link href="/products/MB-250520-001" className="block rounded-3xl bg-cocoa p-5 text-white transition hover:opacity-90"><p className="text-sm opacity-70">熱銷商品</p><p className="text-xl font-bold">奶油針織外套</p></Link>
           </Card>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function HomePage() {
       <section id="mobile" className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <Card className="grid items-center gap-8 lg:grid-cols-2">
           <div><Smartphone className="mb-5 text-mocha"/><h2 className="text-3xl font-black text-cocoa">手機優先，團購主更好操作</h2><p className="mt-4 leading-8 text-cocoa/70">手機版採卡片式設計，不用在小螢幕硬看表格，適合外出收單、查詢訂單與快速出貨。</p></div>
-          <div className="mx-auto w-full max-w-xs rounded-[36px] bg-cocoa p-4 shadow-soft"><div className="rounded-[28px] bg-cream p-4"><div className="mb-4 h-8 rounded-full bg-white"/><div className="space-y-3">{['林小姐｜NT$1,280','王小姐｜NT$2,450','陳小姐｜NT$890'].map(x=><div key={x} className="rounded-2xl bg-white p-4 font-bold text-cocoa shadow-card">{x}</div>)}</div></div></div>
+          <div className="mx-auto w-full max-w-xs rounded-[36px] bg-cocoa p-4 shadow-soft"><div className="rounded-[28px] bg-cream p-4"><div className="mb-4 h-8 rounded-full bg-white"/><div className="space-y-3">{[['林小姐｜NT$1,280','/orders/MF-250520-001'], ['王小姐｜NT$2,450','/orders/MF-250520-002'], ['陳小姐｜NT$890','/orders/MF-250519-018']].map(([x, href])=><Link href={href} key={x} className="block rounded-2xl bg-white p-4 font-bold text-cocoa shadow-card">{x}</Link>)}</div></div></div>
         </Card>
       </section>
 
